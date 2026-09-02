@@ -99,7 +99,7 @@ st.markdown("""
 /* ---------- SCOREBOARD / METRICS ---------- */
 [data-testid="stMetric"],
 [data-testid="stMetric"] * {
-    background: #ffffff !important;
+    background: #dceeff !important;
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
