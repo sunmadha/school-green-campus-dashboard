@@ -170,7 +170,7 @@ st.markdown("""
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
-    background-color: #ffffff !important;
+    background-color: #dceeff !important;
 }
 
 /* ---------- CAPTIONS ---------- */
