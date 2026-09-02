@@ -33,7 +33,7 @@ st.markdown("""
 /* GIN GREEN MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #228B22 0%, #008000 18%, #008000 10%, #D8E4BC 100%);
+        linear-gradient(180deg, #228B22 0%, #008000 1%, #008000 0%, #D8E4BC 100%);
 }
 
 [data-testid="stMain"] {
