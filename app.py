@@ -370,7 +370,12 @@ def dashboard(df):
         st.info("Add more dated entries to see a trend chart.")
 
     st.markdown("### 📝 Recent Activity")
-    st.dataframe(df.tail(10).iloc[::-1], use_container_width=True, hide_index=True)
+    recent_activity = df.tail(10).iloc[::-1].style.set_properties(
+        **{"background-color": "#dceeff", "color": "#111111"}
+    ).set_table_styles([
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+    ])
+    st.dataframe(recent_activity, use_container_width=True, hide_index=True)
 
 
 def tracking(df):
@@ -389,7 +394,12 @@ def tracking(df):
     if selected_department != "All":
         filtered = filtered[filtered["Class/Department"] == selected_department]
 
-    st.dataframe(filtered, use_container_width=True, hide_index=True)
+    tracking_table = filtered.style.set_properties(
+        **{"background-color": "#dceeff", "color": "#111111"}
+    ).set_table_styles([
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+    ])
+    st.dataframe(tracking_table, use_container_width=True, hide_index=True)
 
     if not filtered.empty:
         c1, c2 = st.columns(2)
@@ -434,7 +444,12 @@ def green_guardians(df):
     st.markdown("### 📋 Full Leaderboard")
     display_board = board.copy()
     display_board.insert(0, "Rank", range(1, len(display_board) + 1))
-    st.dataframe(display_board, use_container_width=True, hide_index=True)
+    leaderboard_table = display_board.style.set_properties(
+        **{"background-color": "#dceeff", "color": "#111111"}
+    ).set_table_styles([
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+    ])
+    st.dataframe(leaderboard_table, use_container_width=True, hide_index=True)
 
     current_user = st.session_state.get("current_user")
     if current_user:
