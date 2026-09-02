@@ -99,9 +99,9 @@ st.markdown("""
    WHITE CARDS + DARK/GREEN TEXT = CLEAR AND READABLE
    ============================================================ */
 .card {
-    background: #ffffff !important;
+    background: #111111 !important;
     border: 1px solid #d8eadc !important;
-    color: #111111 !important;
+    color: #ffffff !important;
 }
 
 .card * {
@@ -132,7 +132,7 @@ st.markdown("""
 .card span,
 .card label,
 .card div {
-    color: #7FFF00 !important;
+    color: #ffffff !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
@@ -140,7 +140,7 @@ st.markdown("""
    STREAMLIT METRIC SCOREBOARDS
    ============================================================ */
 [data-testid="stMetric"] {
-    background: #F0C807 !important;
+    background: #FDFBD4 !important;
     border: 1px solid #d8eadc !important;
     border-radius: 14px !important;
 }
@@ -217,13 +217,13 @@ st.markdown("""
 }
 
 [data-testid="stMain"] [role="listbox"] {
-    background: #ffffff !important;
+    background: #FDFBD4 !important;
 }
 
 /* Date input */
 [data-testid="stMain"] [data-baseweb="input"],
 [data-testid="stMain"] [data-baseweb="input"] input {
-    background: #ffffff !important;
+    background: #FDFBD4 !important;
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
@@ -234,14 +234,14 @@ st.markdown("""
 [data-testid="stMain"] [data-testid="stAlert"],
 [data-testid="stMain"] [data-testid="stAlert"] * {
     color: #111111 !important;
-    -webkit-text-fill-color: #111111 !important;
+    -webkit-text-fill-color: #FDFBD4 !important;
 }
 
 /* ============================================================
    TABLE
    ============================================================ */
 [data-testid="stMain"] [data-testid="stDataFrame"] {
-    background: #ffffff !important;
+    background: #7FFF00 !important;
 }
 
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
@@ -263,8 +263,8 @@ st.markdown("""
    ============================================================ */
 [data-testid="stMain"] button,
 [data-testid="stMain"] button * {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #111111 !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #ffffff !important;
 }
 
 /* ============================================================
