@@ -166,10 +166,25 @@ st.markdown("""
 }
 
 /* ---------- TABLE ---------- */
-[data-testid="stMain"] [data-testid="stDataFrame"],
+[data-testid="stMain"] [data-testid="stDataFrame"] {
+    --gdg-text-dark: #111111 !important;
+    --gdg-text-medium: #111111 !important;
+    --gdg-text-light: #333333 !important;
+    --gdg-bg-cell: #dceeff !important;
+    --gdg-bg-header: #dceeff !important;
+    --gdg-bg-header-has-focus: #dceeff !important;
+    --gdg-text-header: #111111 !important;
+    --gdg-text-group-header: #111111 !important;
+    --gdg-border-color: #b8cfe3 !important;
+    color: #111111 !important;
+}
+
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
+}
+
+[data-testid="stMain"] [data-testid="stDataFrame"] canvas {
     background-color: #dceeff !important;
 }
 
@@ -371,9 +386,9 @@ def dashboard(df):
 
     st.markdown("### 📝 Recent Activity")
     recent_activity = df.tail(10).iloc[::-1].style.set_properties(
-        **{"background-color": "#dceeff", "color": "#111111"}
+        **{"background-color": "#dceeff", "color": "#111111 !important"}
     ).set_table_styles([
-        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111 !important")]}
     ])
     st.dataframe(recent_activity, use_container_width=True, hide_index=True)
 
@@ -395,9 +410,9 @@ def tracking(df):
         filtered = filtered[filtered["Class/Department"] == selected_department]
 
     tracking_table = filtered.style.set_properties(
-        **{"background-color": "#dceeff", "color": "#111111"}
+        **{"background-color": "#dceeff", "color": "#111111 !important"}
     ).set_table_styles([
-        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111 !important")]}
     ])
     st.dataframe(tracking_table, use_container_width=True, hide_index=True)
 
@@ -445,9 +460,9 @@ def green_guardians(df):
     display_board = board.copy()
     display_board.insert(0, "Rank", range(1, len(display_board) + 1))
     leaderboard_table = display_board.style.set_properties(
-        **{"background-color": "#dceeff", "color": "#111111"}
+        **{"background-color": "#dceeff", "color": "#111111 !important"}
     ).set_table_styles([
-        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111")]}
+        {"selector": "th", "props": [("background-color", "#dceeff"), ("color", "#111111 !important")]}
     ])
     st.dataframe(leaderboard_table, use_container_width=True, hide_index=True)
 
