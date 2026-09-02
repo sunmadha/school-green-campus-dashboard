@@ -25,116 +25,210 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* ==========================================================
-   TEXT COLOUR FIX ONLY
-   Keep the existing design/layout, but make all main-page
-   text clearly visible. Sidebar remains white.
+   V5.2.3 — COLOUR VISIBILITY FIX ONLY
+   Layout, navigation, calculations, forms and functionality
+   are unchanged.
    ========================================================== */
 
-[data-testid="stSidebar"] { background: #0b6b3a; }
-[data-testid="stSidebar"] * { color: white !important; }
+/* MAIN GREEN + WHITE MIXED THEME */
+[data-testid="stAppViewContainer"] {
+    background:
+        linear-gradient(180deg, #075c3d 0%, #0a7048 18%, #f4faf3 40%, #ffffff 100%);
+}
 
-/* Main heading: GREEN */
+[data-testid="stMain"] {
+    background: transparent !important;
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+/* SIDEBAR — KEEP EXISTING SIDEBAR */
+[data-testid="stSidebar"] {
+    background: #0b6b3a;
+}
+
+[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
+
+/* MAIN HEADINGS — WHITE */
+.main-title,
+.main-title * {
+    color: #ffffff !important;
+}
+
 .main-title {
     font-size: 38px;
     font-weight: 800;
-    color: #08783e !important;
     margin-bottom: 4px;
 }
 
-/* Main-page normal text: WHITE */
+/* SUBHEADINGS / DESCRIPTION — LIGHT GREEN */
+.subtitle,
+.subtitle * {
+    color: #c9f2ad !important;
+}
+
 .subtitle {
-    color: #7CFC00 !important;
     font-size: 17px;
     margin-bottom: 20px;
 }
 
-/* Cards and everything inside cards: WHITE*/
-.card {
-    padding: 18px;
-    border-radius: 14px;
-    background: #f4fbf6;
-    border: 1px solid #d7eadb;
-    margin-bottom: 12px;
-    color: #F0C807 !important;
-}
-
-.card * {
-    color: #FFFFFF!important;
-}
-
-/* Headings on the main page */
-.main .stMarkdown h1,
-.main .stMarkdown h2,
-.main .stMarkdown h3,
-.main .stMarkdown h4,
-.main .stMarkdown h5,
-.main .stMarkdown h6,
+/* PAGE SECTION HEADINGS — WHITE */
 [data-testid="stMain"] h1,
 [data-testid="stMain"] h2,
 [data-testid="stMain"] h3,
 [data-testid="stMain"] h4,
 [data-testid="stMain"] h5,
 [data-testid="stMain"] h6 {
-    color: #00B496!important;
+    color: #ffffff !important;
 }
 
-/* Keep the dashboard title GREEN */
-.main-title,
-.main-title * {
-    color: #08783e !important;
-}
-
-/* Normal Markdown / paragraph text */
+/* NORMAL PAGE TEXT */
 [data-testid="stMain"] .stMarkdown p,
-[data-testid="stMain"] .stMarkdown li,
-[data-testid="stMain"] .stMarkdown span,
-[data-testid="stMain"] .stMarkdown div {
-    color: #FFFFFF !important;
-}
-
-/* Scoreboard / Green Guardians cards */
-[data-testid="stMain"] .card h2,
-[data-testid="stMain"] .card h3,
-[data-testid="stMain"] .card p {
-    color: #7CFC00 !important;
-}
-
-/* Streamlit metric text */
-[data-testid="stMetricLabel"],
-[data-testid="stMetricLabel"] *,
-[data-testid="stMetricValue"],
-[data-testid="stMetricValue"] *,
-[data-testid="stMetricDelta"],
-[data-testid="stMetricDelta"] * {
-    color: #FFFFFF !important;
-}
-
-/* Form labels and input text */
-[data-testid="stMain"] label,
-[data-testid="stMain"] label * {
+[data-testid="stMain"] .stMarkdown li {
     color: #111111 !important;
 }
 
+/* WHITE SCOREBOARD / KPI CARDS */
+.card {
+    padding: 18px;
+    border-radius: 14px;
+    background: #ffffff !important;
+    border: 1px solid #d7eadb;
+    margin-bottom: 12px;
+    color: #111111 !important;
+    box-shadow: 0 4px 14px rgba(0, 70, 40, 0.08);
+}
+
+/* SCOREBOARD CARD TEXT — GREEN HEADINGS, BLACK DETAILS */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+    color: #08783e !important;
+}
+
+.card p,
+.card span,
+.card div {
+    color: #111111 !important;
+}
+
+/* STREAMLIT SCOREBOARD / METRIC VALUES — GREEN */
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] * {
+    color: #08783e !important;
+    font-weight: 800 !important;
+}
+
+/* STREAMLIT SCOREBOARD LABELS — BLACK */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] * {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+
+/* METRIC DELTA — GREEN */
+[data-testid="stMetricDelta"],
+[data-testid="stMetricDelta"] * {
+    color: #08783e !important;
+}
+
+/* ENTER DETAILS / TRACKING FORM LABELS — BLACK ON WHITE */
+[data-testid="stMain"] [data-testid="stForm"] label,
+[data-testid="stMain"] [data-testid="stForm"] label * {
+    color: #111111 !important;
+    font-weight: 650 !important;
+}
+
+/* INPUT TEXT — BLACK */
 [data-testid="stMain"] input,
-[data-testid="stMain"] textarea,
-[data-testid="stMain"] [role="combobox"] {
-    color: #7FFF00 !important;
+[data-testid="stMain"] textarea {
+    color: #111111 !important;
+    background: #ffffff !important;
+    -webkit-text-fill-color: #111111 !important;
 }
 
-/* Selectbox/dropdown visible text */
+[data-testid="stMain"] input::placeholder,
+[data-testid="stMain"] textarea::placeholder {
+    color: #68756d !important;
+    -webkit-text-fill-color: #68756d !important;
+}
+
+/* SELECTBOX / DROPDOWN — BLACK */
+[data-testid="stMain"] [data-baseweb="select"] {
+    background: #ffffff !important;
+}
+
 [data-testid="stMain"] [data-baseweb="select"] * {
-    color: #7FFF00 !important;
+    color: #111111 !important;
 }
 
-/* Dataframe/table text */
+[data-testid="stMain"] [role="listbox"],
+[data-testid="stMain"] [role="option"] {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+
+[data-testid="stMain"] [role="option"] * {
+    color: #111111 !important;
+}
+
+/* DATE INPUT — BLACK */
+[data-testid="stMain"] [data-baseweb="input"] {
+    background: #ffffff !important;
+}
+
+[data-testid="stMain"] [data-baseweb="input"] input {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
+
+/* ALERTS — BLACK */
+[data-testid="stMain"] [data-testid="stAlert"],
+[data-testid="stMain"] [data-testid="stAlert"] * {
+    color: #111111 !important;
+}
+
+/* TABLE / DATAFRAME — BLACK */
+[data-testid="stMain"] [data-testid="stDataFrame"] {
+    background: #ffffff !important;
+}
+
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
     color: #111111 !important;
 }
 
-/* Captions and informational text */
-[data-testid="stMain"] .stCaption,
-[data-testid="stMain"] [data-testid="stCaptionContainer"] * {
-    color: #333333 !important;
+/* CAPTIONS — DARK GREEN/BLACK AND VISIBLE */
+[data-testid="stMain"] [data-testid="stCaptionContainer"] *,
+[data-testid="stMain"] .stCaption {
+    color: #52645a !important;
+}
+
+/* BUTTON TEXT — WHITE */
+[data-testid="stMain"] button,
+[data-testid="stMain"] [data-testid="stFormSubmitButton"] button,
+[data-testid="stMain"] [data-testid="stDownloadButton"] button {
+    color: #ffffff !important;
+}
+
+/* LINKS */
+[data-testid="stMain"] a {
+    color: #08783e !important;
+}
+
+/* SIDEBAR CONTENT STAYS WHITE */
+[data-testid="stSidebar"] .stMarkdown,
+[data-testid="stSidebar"] .stCaption,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span {
+    color: #ffffff !important;
 }
 </style>
 """, unsafe_allow_html=True)
