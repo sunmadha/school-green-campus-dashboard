@@ -30,10 +30,10 @@ st.markdown("""
    are unchanged.
    ========================================================== */
 
-/* MAIN GREEN + GIN GREEN MIXED THEME */
+/* FOREST GREEN + GIN GREEN MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #075c3d 0%, #0a7048 18%, #f4faf3 40%, #D8E4BC 100%);
+        linear-gradient(180deg, #075c3d 0%, #008000 18%, #228B22 40%, #D8E4BC 100%);
 }
 
 [data-testid="stMain"] {
