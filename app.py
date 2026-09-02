@@ -30,10 +30,10 @@ st.markdown("""
    are unchanged.
    ========================================================== */
 
-/* GIN GREEN MIXED THEME */
+/* MAIN GREEN + WHITE MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #228B22 0%, #008000 1%, #008000 0%, #D8E4BC 100%);
+        linear-gradient(180deg, #075c3d 0%, #0a7048 18%, #f4faf3 40%, #ffffff 100%);
 }
 
 [data-testid="stMain"] {
@@ -46,17 +46,17 @@ st.markdown("""
 
 /* SIDEBAR — KEEP EXISTING SIDEBAR */
 [data-testid="stSidebar"] {
-    background: #008000;
+    background: #0b6b3a;
 }
 
 [data-testid="stSidebar"] * {
     color: #ffffff !important;
 }
 
-/* MAIN HEADINGS — BROWN */
+/* MAIN HEADINGS — WHITE */
 .main-title,
 .main-title * {
-    color: #7C4700 !important;
+    color: #ffffff !important;
 }
 
 .main-title {
@@ -65,10 +65,10 @@ st.markdown("""
     margin-bottom: 4px;
 }
 
-/* SUBHEADINGS / DESCRIPTION — OLIVE GREEN */
+/* SUBHEADINGS / DESCRIPTION — LIGHT GREEN */
 .subtitle,
 .subtitle * {
-    color: #808000 !important;
+    color: #c9f2ad !important;
 }
 
 .subtitle {
@@ -76,41 +76,41 @@ st.markdown("""
     margin-bottom: 20px;
 }
 
-/* PAGE SECTION HEADINGS — BROWN */
+/* PAGE SECTION HEADINGS — WHITE */
 [data-testid="stMain"] h1,
 [data-testid="stMain"] h2,
 [data-testid="stMain"] h3,
 [data-testid="stMain"] h4,
 [data-testid="stMain"] h5,
 [data-testid="stMain"] h6 {
-    color: #7C4700 !important;
+    color: #ffffff !important;
 }
 
 /* NORMAL PAGE TEXT */
 [data-testid="stMain"] .stMarkdown p,
 [data-testid="stMain"] .stMarkdown li {
-    color: #A8DCAB !important;
+    color: #111111 !important;
 }
 
 /* WHITE SCOREBOARD / KPI CARDS */
 .card {
     padding: 18px;
     border-radius: 14px;
-    background: #74C476!important;
+    background: #ffffff !important;
     border: 1px solid #d7eadb;
     margin-bottom: 12px;
-    color: #FFFFFF !important;
+    color: #111111 !important;
     box-shadow: 0 4px 14px rgba(0, 70, 40, 0.08);
 }
 
-/* SCOREBOARD CARD TEXT — BROWN, BLACK DETAILS */
+/* SCOREBOARD CARD TEXT — GREEN HEADINGS, BLACK DETAILS */
 .card h1,
 .card h2,
 .card h3,
 .card h4,
 .card h5,
 .card h6 {
-    color: #7C4700 !important;
+    color: #08783e !important;
 }
 
 .card p,
@@ -162,7 +162,7 @@ st.markdown("""
 
 /* SELECTBOX / DROPDOWN — BLACK */
 [data-testid="stMain"] [data-baseweb="select"] {
-    background: #7CFC00 !important;
+    background: #ffffff !important;
 }
 
 [data-testid="stMain"] [data-baseweb="select"] * {
@@ -197,7 +197,7 @@ st.markdown("""
 
 /* TABLE / DATAFRAME — BLACK */
 [data-testid="stMain"] [data-testid="stDataFrame"] {
-    background: #7C4700 !important;
+    background: #ffffff !important;
 }
 
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
@@ -210,11 +210,11 @@ st.markdown("""
     color: #52645a !important;
 }
 
-/* BUTTON TEXT — LIGHT GREEN */
+/* BUTTON TEXT — WHITE */
 [data-testid="stMain"] button,
 [data-testid="stMain"] [data-testid="stFormSubmitButton"] button,
 [data-testid="stMain"] [data-testid="stDownloadButton"] button {
-    color: #90EE90 !important;
+    color: #ffffff !important;
 }
 
 /* LINKS */
@@ -228,7 +228,7 @@ st.markdown("""
 [data-testid="stSidebar"] label,
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span {
-    color: #00B496 !important;
+    color: #ffffff !important;
 }
 </style>
 """, unsafe_allow_html=True)
