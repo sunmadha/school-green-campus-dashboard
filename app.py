@@ -24,17 +24,117 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+/* ==========================================================
+   TEXT COLOUR FIX ONLY
+   Keep the existing design/layout, but make all main-page
+   text clearly visible. Sidebar remains white.
+   ========================================================== */
+
 [data-testid="stSidebar"] { background: #0b6b3a; }
 [data-testid="stSidebar"] * { color: white !important; }
+
+/* Main heading: GREEN */
 .main-title {
-    font-size: 38px; font-weight: 800; color: #08783e; margin-bottom: 4px;
+    font-size: 38px;
+    font-weight: 800;
+    color: #08783e !important;
+    margin-bottom: 4px;
 }
+
+/* Main-page normal text: BLACK */
 .subtitle {
-    color: #4d6658; font-size: 17px; margin-bottom: 20px;
+    color: #111111 !important;
+    font-size: 17px;
+    margin-bottom: 20px;
 }
+
+/* Cards and everything inside cards: BLACK */
 .card {
-    padding: 18px; border-radius: 14px; background: #f4fbf6;
-    border: 1px solid #d7eadb; margin-bottom: 12px;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f4fbf6;
+    border: 1px solid #d7eadb;
+    margin-bottom: 12px;
+    color: #111111 !important;
+}
+
+.card * {
+    color: #111111 !important;
+}
+
+/* Headings on the main page */
+.main .stMarkdown h1,
+.main .stMarkdown h2,
+.main .stMarkdown h3,
+.main .stMarkdown h4,
+.main .stMarkdown h5,
+.main .stMarkdown h6,
+[data-testid="stMain"] h1,
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3,
+[data-testid="stMain"] h4,
+[data-testid="stMain"] h5,
+[data-testid="stMain"] h6 {
+    color: #111111 !important;
+}
+
+/* Keep the dashboard title GREEN */
+.main-title,
+.main-title * {
+    color: #08783e !important;
+}
+
+/* Normal Markdown / paragraph text */
+[data-testid="stMain"] .stMarkdown p,
+[data-testid="stMain"] .stMarkdown li,
+[data-testid="stMain"] .stMarkdown span,
+[data-testid="stMain"] .stMarkdown div {
+    color: #111111 !important;
+}
+
+/* Scoreboard / Green Guardians cards */
+[data-testid="stMain"] .card h2,
+[data-testid="stMain"] .card h3,
+[data-testid="stMain"] .card p {
+    color: #111111 !important;
+}
+
+/* Streamlit metric text */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] *,
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] *,
+[data-testid="stMetricDelta"],
+[data-testid="stMetricDelta"] * {
+    color: #111111 !important;
+}
+
+/* Form labels and input text */
+[data-testid="stMain"] label,
+[data-testid="stMain"] label * {
+    color: #111111 !important;
+}
+
+[data-testid="stMain"] input,
+[data-testid="stMain"] textarea,
+[data-testid="stMain"] [role="combobox"] {
+    color: #111111 !important;
+}
+
+/* Selectbox/dropdown visible text */
+[data-testid="stMain"] [data-baseweb="select"] * {
+    color: #111111 !important;
+}
+
+/* Dataframe/table text */
+[data-testid="stMain"] [data-testid="stDataFrame"] * {
+    color: #111111 !important;
+}
+
+/* Captions and informational text */
+[data-testid="stMain"] .stCaption,
+[data-testid="stMain"] [data-testid="stCaptionContainer"] * {
+    color: #333333 !important;
 }
 </style>
 """, unsafe_allow_html=True)
