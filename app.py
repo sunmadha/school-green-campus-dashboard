@@ -41,25 +41,25 @@ st.markdown("""
     margin-bottom: 4px;
 }
 
-/* Main-page normal text: BLACK */
+/* Main-page normal text: WHITE */
 .subtitle {
-    color: #111111 !important;
+    color: #7CFC00 !important;
     font-size: 17px;
     margin-bottom: 20px;
 }
 
-/* Cards and everything inside cards: BLACK */
+/* Cards and everything inside cards: WHITE*/
 .card {
     padding: 18px;
     border-radius: 14px;
     background: #f4fbf6;
     border: 1px solid #d7eadb;
     margin-bottom: 12px;
-    color: #111111 !important;
+    color: #F0C807 !important;
 }
 
 .card * {
-    color: #111111 !important;
+    color: #FFFFFF!important;
 }
 
 /* Headings on the main page */
@@ -75,7 +75,7 @@ st.markdown("""
 [data-testid="stMain"] h4,
 [data-testid="stMain"] h5,
 [data-testid="stMain"] h6 {
-    color: #111111 !important;
+    color: #00B496!important;
 }
 
 /* Keep the dashboard title GREEN */
@@ -89,14 +89,14 @@ st.markdown("""
 [data-testid="stMain"] .stMarkdown li,
 [data-testid="stMain"] .stMarkdown span,
 [data-testid="stMain"] .stMarkdown div {
-    color: #111111 !important;
+    color: #FFFFFF !important;
 }
 
 /* Scoreboard / Green Guardians cards */
 [data-testid="stMain"] .card h2,
 [data-testid="stMain"] .card h3,
 [data-testid="stMain"] .card p {
-    color: #111111 !important;
+    color: #7CFC00 !important;
 }
 
 /* Streamlit metric text */
@@ -106,7 +106,7 @@ st.markdown("""
 [data-testid="stMetricValue"] *,
 [data-testid="stMetricDelta"],
 [data-testid="stMetricDelta"] * {
-    color: #111111 !important;
+    color: #FFFFFF !important;
 }
 
 /* Form labels and input text */
@@ -118,12 +118,12 @@ st.markdown("""
 [data-testid="stMain"] input,
 [data-testid="stMain"] textarea,
 [data-testid="stMain"] [role="combobox"] {
-    color: #111111 !important;
+    color: #7FFF00 !important;
 }
 
 /* Selectbox/dropdown visible text */
 [data-testid="stMain"] [data-baseweb="select"] * {
-    color: #111111 !important;
+    color: #7FFF00 !important;
 }
 
 /* Dataframe/table text */
