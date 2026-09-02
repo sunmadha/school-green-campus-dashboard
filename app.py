@@ -34,7 +34,7 @@ st.markdown("""
 /* ---------- MAIN PAGE ---------- */
 [data-testid="stAppViewContainer"],
 [data-testid="stMain"] {
-    background: #ffffff !important;
+    background: #dff0c7 !important;
 }
 
 [data-testid="stAppViewContainer"] {
