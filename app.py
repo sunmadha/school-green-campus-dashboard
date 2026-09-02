@@ -63,21 +63,21 @@ st.markdown("""
 [data-testid="stMain"] h5 *,
 [data-testid="stMain"] h6 * {
     color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+    -webkit-text-fill-color: #000000 !important;
     text-shadow: none !important;
 }
 
 /* Main title */
 .main-title,
 .main-title * {
-    color: #ffffff !important;
+    color: #000000 !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Subheadings / descriptions */
 .subtitle,
 .subtitle * {
-    color: #e7f6c5 !important;
+    color: #FFFFFF !important;
     -webkit-text-fill-color: #e7f6c5 !important;
 }
 
@@ -90,7 +90,7 @@ st.markdown("""
 [data-testid="stMain"] .stMarkdown li,
 [data-testid="stMain"] p,
 [data-testid="stMain"] li {
-    color: #ffffff !important;
+    color: #7C4700 !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 
@@ -106,7 +106,7 @@ st.markdown("""
 
 .card * {
     background-color: transparent !important;
-    color: #111111 !important;
+    color: #FFFFFF !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
@@ -263,7 +263,7 @@ st.markdown("""
    ============================================================ */
 [data-testid="stMain"] button,
 [data-testid="stMain"] button * {
-    color: #ffffff !important;
+    color: #111111 !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 
@@ -284,7 +284,7 @@ st.markdown("""
 }
 
 [data-testid="stSidebar"] * {
-    color: #ffffff !important;
+    color: #000000 !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 </style>
