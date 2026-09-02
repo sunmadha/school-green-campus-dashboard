@@ -30,10 +30,10 @@ st.markdown("""
    are unchanged.
    ========================================================== */
 
-/* FOREST GREEN + GIN GREEN MIXED THEME */
+/* GIN GREEN MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #228B22 0%, #008000 18%, #008000 40%, #D8E4BC 100%);
+        linear-gradient(180deg, #228B22 0%, #008000 18%, #008000 10%, #D8E4BC 100%);
 }
 
 [data-testid="stMain"] {
@@ -46,17 +46,17 @@ st.markdown("""
 
 /* SIDEBAR — KEEP EXISTING SIDEBAR */
 [data-testid="stSidebar"] {
-    background: #228B22;
+    background: #008000;
 }
 
 [data-testid="stSidebar"] * {
     color: #ffffff !important;
 }
 
-/* MAIN HEADINGS — WHITE */
+/* MAIN HEADINGS — BROWN */
 .main-title,
 .main-title * {
-    color: #ffffff !important;
+    color: #7C4700 !important;
 }
 
 .main-title {
@@ -76,14 +76,14 @@ st.markdown("""
     margin-bottom: 20px;
 }
 
-/* PAGE SECTION HEADINGS — WHITE */
+/* PAGE SECTION HEADINGS — BROWN */
 [data-testid="stMain"] h1,
 [data-testid="stMain"] h2,
 [data-testid="stMain"] h3,
 [data-testid="stMain"] h4,
 [data-testid="stMain"] h5,
 [data-testid="stMain"] h6 {
-    color: #ffffff !important;
+    color: #7C4700 !important;
 }
 
 /* NORMAL PAGE TEXT */
@@ -103,14 +103,14 @@ st.markdown("""
     box-shadow: 0 4px 14px rgba(0, 70, 40, 0.08);
 }
 
-/* SCOREBOARD CARD TEXT — GREEN HEADINGS, BLACK DETAILS */
+/* SCOREBOARD CARD TEXT — BROWN, BLACK DETAILS */
 .card h1,
 .card h2,
 .card h3,
 .card h4,
 .card h5,
 .card h6 {
-    color: #FFFFFF !important;
+    color: #7C4700 !important;
 }
 
 .card p,
@@ -197,7 +197,7 @@ st.markdown("""
 
 /* TABLE / DATAFRAME — BLACK */
 [data-testid="stMain"] [data-testid="stDataFrame"] {
-    background: #ffffff !important;
+    background: #7C4700 !important;
 }
 
 [data-testid="stMain"] [data-testid="stDataFrame"] * {
