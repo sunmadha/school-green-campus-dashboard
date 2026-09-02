@@ -25,266 +25,183 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* ============================================================
-   FINAL GREEN VISIBILITY VERSION
-   COLOUR CHANGES ONLY.
-   No layout, navigation, data, calculations or functionality
-   have been changed.
+   SIMPLE BLACK & WHITE VERSION
+   Main page: white background + black text.
+   Sidebar: green with a small tree/plant illustration at top.
+   No other application functionality is changed.
    ============================================================ */
 
-/* ---------- COMPLETE MAIN APP BACKGROUND ---------- */
+/* ---------- MAIN PAGE ---------- */
 [data-testid="stAppViewContainer"],
 [data-testid="stMain"] {
-    background: #2e8b57 !important;
+    background: #ffffff !important;
 }
 
 [data-testid="stAppViewContainer"] {
     background-image: none !important;
 }
 
-/* Keep Streamlit header transparent */
 [data-testid="stHeader"] {
-    background: transparent !important;
+    background: #ffffff !important;
 }
 
-/* ============================================================
-   MAIN HEADINGS
-   WHITE = maximum contrast against green
-   ============================================================ */
+/* ---------- LARGE, SIMPLE TITLE ---------- */
+.main-title,
+.main-title * {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    text-shadow: none !important;
+}
+
+.main-title {
+    font-size: 48px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    margin-bottom: 8px !important;
+}
+
+/* Subtitle */
+.subtitle,
+.subtitle * {
+    color: #333333 !important;
+    -webkit-text-fill-color: #333333 !important;
+    font-size: 17px !important;
+}
+
+/* ---------- ALL MAIN TEXT BLACK ---------- */
 [data-testid="stMain"] h1,
 [data-testid="stMain"] h2,
 [data-testid="stMain"] h3,
 [data-testid="stMain"] h4,
 [data-testid="stMain"] h5,
 [data-testid="stMain"] h6,
-[data-testid="stMain"] h1 *,
-[data-testid="stMain"] h2 *,
-[data-testid="stMain"] h3 *,
-[data-testid="stMain"] h4 *,
-[data-testid="stMain"] h5 *,
-[data-testid="stMain"] h6 * {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #000000 !important;
-    text-shadow: none !important;
-}
-
-/* Main title */
-.main-title,
-.main-title * {
-    color: #000000 !important;
-    -webkit-text-fill-color: #ffffff !important;
-}
-
-/* Subheadings / descriptions */
-.subtitle,
-.subtitle * {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #e7f6c5 !important;
-}
-
-/* ============================================================
-   NORMAL TEXT ON GREEN BACKGROUND
-   WHITE — replaces the old green text
-   ============================================================ */
-[data-testid="stMain"] .stMarkdown,
-[data-testid="stMain"] .stMarkdown p,
-[data-testid="stMain"] .stMarkdown li,
 [data-testid="stMain"] p,
-[data-testid="stMain"] li {
-    color: #7C4700 !important;
-    -webkit-text-fill-color: #ffffff !important;
-}
-
-/* ============================================================
-   SCOREBOARD / KPI CARDS
-   WHITE CARDS + DARK/GREEN TEXT = CLEAR AND READABLE
-   ============================================================ */
-.card {
-    background: #111111 !important;
-    border: 1px solid #d8eadc !important;
-    color: #ffffff !important;
-}
-
-.card * {
-    background-color: transparent !important;
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #111111 !important;
-}
-
-/* Card titles */
-.card h1,
-.card h2,
-.card h3,
-.card h4,
-.card h5,
-.card h6,
-.card h1 *,
-.card h2 *,
-.card h3 *,
-.card h4 *,
-.card h5 *,
-.card h6 * {
-    color: #08783e !important;
-    -webkit-text-fill-color: #08783e !important;
-}
-
-/* Card values/details */
-.card p,
-.card span,
-.card label,
-.card div {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #111111 !important;
-}
-
-/* ============================================================
-   STREAMLIT METRIC SCOREBOARDS
-   ============================================================ */
-[data-testid="stMetric"] {
-    background: #FDFBD4 !important;
-    border: 1px solid #d8eadc !important;
-    border-radius: 14px !important;
-}
-
-[data-testid="stMetric"] * {
+[data-testid="stMain"] li,
+[data-testid="stMain"] .stMarkdown,
+[data-testid="stMain"] .stMarkdown * {
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
+}
+
+/* ---------- WHITE CARDS WITH BLACK TEXT ---------- */
+.card,
+.card * {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
+
+.card {
+    background: #ffffff !important;
+    border: 1px solid #dddddd !important;
+    box-shadow: none !important;
+}
+
+/* ---------- SCOREBOARD / METRICS ---------- */
+[data-testid="stMetric"],
+[data-testid="stMetric"] * {
+    background: #ffffff !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
+
+[data-testid="stMetric"] {
+    border: 1px solid #dddddd !important;
+    border-radius: 12px !important;
 }
 
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] *,
-[data-testid="stMetricValue"] div {
-    color: #08783e !important;
-    -webkit-text-fill-color: #08783e !important;
-    font-weight: 800 !important;
-}
-
 [data-testid="stMetricLabel"],
-[data-testid="stMetricLabel"] * {
-    color: #111111 !important;
-    -webkit-text-fill-color: #111111 !important;
-    font-weight: 700 !important;
-}
-
+[data-testid="stMetricLabel"] *,
 [data-testid="stMetricDelta"],
 [data-testid="stMetricDelta"] * {
-    color: #08783e !important;
-    -webkit-text-fill-color: #08783e !important;
-}
-
-/* ============================================================
-   ENTER DETAILS + TRACKING
-   HEADINGS = WHITE
-   FORM TEXT = BLACK ON WHITE INPUTS
-   ============================================================ */
-[data-testid="stForm"] {
-    color: #111111 !important;
-}
-
-[data-testid="stForm"] label,
-[data-testid="stForm"] label *,
-[data-testid="stForm"] p {
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
-/* Inputs */
+/* ---------- FORM LABELS + INPUTS ---------- */
+[data-testid="stMain"] label,
+[data-testid="stMain"] label * {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
+
 [data-testid="stMain"] input,
-[data-testid="stMain"] textarea {
-    background: #00B496 !important;
+[data-testid="stMain"] textarea,
+[data-testid="stMain"] [role="combobox"],
+[data-testid="stMain"] [data-baseweb="select"],
+[data-testid="stMain"] [data-baseweb="select"] * {
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
-    caret-color: #111111 !important;
+    background: #ffffff !important;
 }
 
 [data-testid="stMain"] input::placeholder,
 [data-testid="stMain"] textarea::placeholder {
-    color: #5f6b63 !important;
-    -webkit-text-fill-color: #5f6b63 !important;
+    color: #666666 !important;
+    -webkit-text-fill-color: #666666 !important;
 }
 
-/* Dropdowns */
-[data-testid="stMain"] [data-baseweb="select"],
-[data-testid="stMain"] [data-baseweb="select"] > div {
-    background: #4FB06D !important;
-    color: #111111 !important;
-}
-
-[data-testid="stMain"] [data-baseweb="select"] *,
+[data-testid="stMain"] [role="listbox"],
 [data-testid="stMain"] [role="option"],
 [data-testid="stMain"] [role="option"] * {
+    background: #ffffff !important;
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
-[data-testid="stMain"] [role="listbox"] {
-    background: #FDFBD4 !important;
-}
-
-/* Date input */
+/* ---------- DATE INPUT ---------- */
 [data-testid="stMain"] [data-baseweb="input"],
 [data-testid="stMain"] [data-baseweb="input"] input {
-    background: #FDFBD4 !important;
+    background: #ffffff !important;
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
-/* ============================================================
-   ALERTS
-   ============================================================ */
+/* ---------- ALERT / INFO BOXES ---------- */
 [data-testid="stMain"] [data-testid="stAlert"],
 [data-testid="stMain"] [data-testid="stAlert"] * {
     color: #111111 !important;
-    -webkit-text-fill-color: #FDFBD4 !important;
-}
-
-/* ============================================================
-   TABLE
-   ============================================================ */
-[data-testid="stMain"] [data-testid="stDataFrame"] {
-    background: #7FFF00 !important;
-}
-
-[data-testid="stMain"] [data-testid="stDataFrame"] * {
-    color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
-/* ============================================================
-   CAPTIONS
-   ============================================================ */
-[data-testid="stMain"] [data-testid="stCaptionContainer"] *,
-[data-testid="stMain"] .stCaption {
-    color: #e7f6c5 !important;
-    -webkit-text-fill-color: #e7f6c5 !important;
+/* ---------- TABLE ---------- */
+[data-testid="stMain"] [data-testid="stDataFrame"],
+[data-testid="stMain"] [data-testid="stDataFrame"] * {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    background-color: #ffffff !important;
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+/* ---------- CAPTIONS ---------- */
+[data-testid="stMain"] [data-testid="stCaptionContainer"] *,
+[data-testid="stMain"] .stCaption {
+    color: #444444 !important;
+    -webkit-text-fill-color: #444444 !important;
+}
+
+/* ---------- BUTTONS: SIMPLE BLACK ---------- */
 [data-testid="stMain"] button,
 [data-testid="stMain"] button * {
-    color: #111111 !important;
+    background: #111111 !important;
+    color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 
-/* ============================================================
-   LINKS
-   ============================================================ */
-[data-testid="stMain"] a,
-[data-testid="stMain"] a * {
-    color: #fff4a8 !important;
-    -webkit-text-fill-color: #fff4a8 !important;
-}
-
-/* ============================================================
-   SIDEBAR — PRESERVE ITS EXISTING GREEN/PLANT DESIGN
-   ============================================================ */
+/* ---------- SIDEBAR: GREEN ONLY ---------- */
 [data-testid="stSidebar"] {
-    /* Existing sidebar remains in place */
+    background: #0b6b3a !important;
 }
 
 [data-testid="stSidebar"] * {
-    color: #000000 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Sidebar navigation radio text */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] label * {
+    color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 </style>
@@ -587,6 +504,28 @@ if not st.session_state.submitted:
 show_header()
 
 with st.sidebar:
+    st.markdown(
+        """
+        <div style="width:100%; text-align:center; margin:0 0 8px 0;">
+          <svg viewBox="0 0 300 105" width="100%" height="105" xmlns="http://www.w3.org/2000/svg" aria-label="Trees and plants">
+            <rect width="300" height="105" rx="14" fill="#0b6b3a"/>
+            <circle cx="58" cy="37" r="24" fill="#ffffff" opacity="0.95"/>
+            <circle cx="40" cy="49" r="19" fill="#ffffff" opacity="0.95"/>
+            <circle cx="76" cy="49" r="19" fill="#ffffff" opacity="0.95"/>
+            <rect x="53" y="48" width="10" height="36" rx="4" fill="#ffffff"/>
+            <circle cx="151" cy="45" r="25" fill="#ffffff" opacity="0.95"/>
+            <circle cx="132" cy="56" r="18" fill="#ffffff" opacity="0.95"/>
+            <circle cx="170" cy="56" r="18" fill="#ffffff" opacity="0.95"/>
+            <rect x="146" y="52" width="10" height="32" rx="4" fill="#ffffff"/>
+            <path d="M218 84 C218 65 222 49 235 35 C248 49 252 65 252 84 Z" fill="#ffffff"/>
+            <path d="M214 84 C214 70 207 60 198 52 C198 68 203 78 214 84 Z" fill="#ffffff"/>
+            <path d="M256 84 C256 70 263 60 272 52 C272 68 267 78 256 84 Z" fill="#ffffff"/>
+            <rect x="231" y="76" width="8" height="13" rx="3" fill="#ffffff"/>
+          </svg>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     st.markdown("## 🌱 Green Campus")
     st.caption(f"Current user: {st.session_state.current_user}")
     page = st.radio(
