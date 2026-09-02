@@ -132,7 +132,7 @@ st.markdown("""
 .card span,
 .card label,
 .card div {
-    color: #111111 !important;
+    color: #7FFF00 !important;
     -webkit-text-fill-color: #111111 !important;
 }
 
@@ -140,7 +140,7 @@ st.markdown("""
    STREAMLIT METRIC SCOREBOARDS
    ============================================================ */
 [data-testid="stMetric"] {
-    background: #ffffff !important;
+    background: #F0C807 !important;
     border: 1px solid #d8eadc !important;
     border-radius: 14px !important;
 }
@@ -190,7 +190,7 @@ st.markdown("""
 /* Inputs */
 [data-testid="stMain"] input,
 [data-testid="stMain"] textarea {
-    background: #ffffff !important;
+    background: #00B496 !important;
     color: #111111 !important;
     -webkit-text-fill-color: #111111 !important;
     caret-color: #111111 !important;
@@ -205,7 +205,7 @@ st.markdown("""
 /* Dropdowns */
 [data-testid="stMain"] [data-baseweb="select"],
 [data-testid="stMain"] [data-baseweb="select"] > div {
-    background: #ffffff !important;
+    background: #4FB06D !important;
     color: #111111 !important;
 }
 
@@ -263,8 +263,8 @@ st.markdown("""
    ============================================================ */
 [data-testid="stMain"] button,
 [data-testid="stMain"] button * {
-    color: #111111 !important;
-    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #111111 !important;
 }
 
 /* ============================================================
