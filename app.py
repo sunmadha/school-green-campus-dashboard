@@ -30,10 +30,10 @@ st.markdown("""
    are unchanged.
    ========================================================== */
 
-/* MAIN GREEN + WHITE MIXED THEME */
+/* MAIN GREEN + GIN GREEN MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #075c3d 0%, #0a7048 18%, #f4faf3 40%, #ffffff 100%);
+        linear-gradient(180deg, #075c3d 0%, #0a7048 18%, #f4faf3 40%, #D8E4BC 100%);
 }
 
 [data-testid="stMain"] {
@@ -96,7 +96,7 @@ st.markdown("""
 .card {
     padding: 18px;
     border-radius: 14px;
-    background: #ffffff !important;
+    background: #74C476!important;
     border: 1px solid #d7eadb;
     margin-bottom: 12px;
     color: #111111 !important;
@@ -162,7 +162,7 @@ st.markdown("""
 
 /* SELECTBOX / DROPDOWN — BLACK */
 [data-testid="stMain"] [data-baseweb="select"] {
-    background: #ffffff !important;
+    background: #7CFC00 !important;
 }
 
 [data-testid="stMain"] [data-baseweb="select"] * {
@@ -228,7 +228,7 @@ st.markdown("""
 [data-testid="stSidebar"] label,
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span {
-    color: #ffffff !important;
+    color: #00B496 !important;
 }
 </style>
 """, unsafe_allow_html=True)
