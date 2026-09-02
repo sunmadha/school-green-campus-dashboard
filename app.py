@@ -33,7 +33,7 @@ st.markdown("""
 /* FOREST GREEN + GIN GREEN MIXED THEME */
 [data-testid="stAppViewContainer"] {
     background:
-        linear-gradient(180deg, #075c3d 0%, #008000 18%, #228B22 40%, #D8E4BC 100%);
+        linear-gradient(180deg, #228B22 0%, #008000 18%, #008000 40%, #D8E4BC 100%);
 }
 
 [data-testid="stMain"] {
@@ -46,7 +46,7 @@ st.markdown("""
 
 /* SIDEBAR — KEEP EXISTING SIDEBAR */
 [data-testid="stSidebar"] {
-    background: #0b6b3a;
+    background: #228B22;
 }
 
 [data-testid="stSidebar"] * {
@@ -65,10 +65,10 @@ st.markdown("""
     margin-bottom: 4px;
 }
 
-/* SUBHEADINGS / DESCRIPTION — LIGHT GREEN */
+/* SUBHEADINGS / DESCRIPTION — OLIVE GREEN */
 .subtitle,
 .subtitle * {
-    color: #c9f2ad !important;
+    color: #808000 !important;
 }
 
 .subtitle {
@@ -89,7 +89,7 @@ st.markdown("""
 /* NORMAL PAGE TEXT */
 [data-testid="stMain"] .stMarkdown p,
 [data-testid="stMain"] .stMarkdown li {
-    color: #111111 !important;
+    color: #A8DCAB !important;
 }
 
 /* WHITE SCOREBOARD / KPI CARDS */
@@ -99,7 +99,7 @@ st.markdown("""
     background: #74C476!important;
     border: 1px solid #d7eadb;
     margin-bottom: 12px;
-    color: #111111 !important;
+    color: #FFFFFF !important;
     box-shadow: 0 4px 14px rgba(0, 70, 40, 0.08);
 }
 
@@ -110,7 +110,7 @@ st.markdown("""
 .card h4,
 .card h5,
 .card h6 {
-    color: #08783e !important;
+    color: #FFFFFF !important;
 }
 
 .card p,
@@ -210,11 +210,11 @@ st.markdown("""
     color: #52645a !important;
 }
 
-/* BUTTON TEXT — WHITE */
+/* BUTTON TEXT — LIGHT GREEN */
 [data-testid="stMain"] button,
 [data-testid="stMain"] [data-testid="stFormSubmitButton"] button,
 [data-testid="stMain"] [data-testid="stDownloadButton"] button {
-    color: #ffffff !important;
+    color: #90EE90 !important;
 }
 
 /* LINKS */
